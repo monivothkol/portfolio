@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="project.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">Monivoth Site</a>
+      <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="./index.html#background">Background</a>
+        <a href="./project.html" class="active">Project</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="content-container">
+      <h3 class="section-header">Project Overview</h3>
+      <div class="container">
+        <div class="card">
+          <h3 class="card-header">SmartNas app</h3>
+          <div class="card-img">
+            <img src="./pic/image.png" alt="" />
+          </div>
+
+          <div class="card-description">
+            <p>
+                Cloning SmartNas app for display. Functionality isn't applied yet. You may test by number 098909004 with OTP 456123.
+            </p>
+            <a href="https://github.com/monivothkol/SmartNasApp" target="_blank" class="card-btn">Git Detail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+        if (cards.length === 1) {
+          cards.forEach(function (card) {
+            card.style.maxWidth = "calc(50% - 20px)";
+          });
+        } else {
+          cards.forEach(function (card) {
+            card.style.maxWidth = "calc(25% - 20px)";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
