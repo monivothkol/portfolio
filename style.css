@@ -886,4 +886,112 @@ form .text-field{
         /* testing */
     }
     
+
+    .timeline{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        left: calc(20% + 1px);
+    }
+    .timeline::before{
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background-color: var(--primary-color);
+    
+    }
+    .timeline-item{
+        margin-bottom: 40px;
+        width: auto;
+        position: relative;
+        padding-left: 50px;
+    }
+    
+    .timeline-item:last-child{
+        margin-bottom: 0;
+    }
+    
+    .timeline-bullet{
+    
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--primary-color);
+        box-shadow: 0 0 25px var(--primary-color);
+        border-radius: 50%;
+        top: 10px;
+        left: -7px;
+    /* left: calc(50% - 1px); */
+    }
+    
+    .timeline-content{
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        padding: 15px 25px 15px 15px;
+    }
+    .timeline-content:hover{
+        box-shadow: 0 0 25px var(--primary-color);
+        transform: scale(1.01);
+        transition: 0.3s ease-in-out;
+    }
+    .timeline-content ul {
+        padding-left: 25px;
+    }
+    .timeline-content li{
+        padding: 4px 0 4px;
+    }
+    .timeline-content h3{
+        font-size: 1.2rem;
+        padding: 0rem 0 0.5rem;
+    }
+    
+    .timeline-date{
+        font-size: 20px;
+        font-weight: 800;
+        margin: 6px 0 15px;
+    }
+    
+    
+    .contact{
+        border: 1px solid rgb(171, 35, 255);
+        box-shadow: inset 0 0 7rem rgb(171, 35, 255);   
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .contact-header{
+        box-shadow: 0 0 25px rgb(171, 35, 255);
+    }
+    
+    .contact-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        margin-left: calc(50% - 315px);
+    }
+    
+    form .text-field{
+        width: 100%;
+        height: 100%;
+        border: 3px solid rgb(171, 35, 255);
+        border-radius: 0.5rem;
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .background .section-header{
+        font-size: 3rem;
+        padding: 2rem;
+    }
+    .contact .contact-header{
+        font-size: 3rem;
+        padding: 1rem;
+    }
+    
 }
