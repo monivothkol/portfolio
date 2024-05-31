@@ -440,7 +440,7 @@ form .text-field{
         
     }
     .sidebar{
-        display: flex;
+        display: none;
     }
     .navbar{
         display: none;
