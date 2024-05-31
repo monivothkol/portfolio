@@ -572,7 +572,7 @@ form .text-field{
         
     }
     .sidebar{
-        display: flex;
+        display: none;
     }
     .navbar{
         display: none;
@@ -711,7 +711,7 @@ form .text-field{
         
     }
     .sidebar{
-        display: flex;
+        display: none;
     }
     .navbar{
         display: none;
@@ -839,10 +839,24 @@ form .text-field{
         margin: 0;
         overflow: hidden;
     }
+
+    .home-content{
+        width: 50%;
+        padding: 0;
+    }
+
+    .home-img{
+        display: flex;
+        width: 30%; 
+    }
+    .sidebar{
+        display: none;
+    }
     .navbar{
         display: flex;
     }
     .logo{
+        font-size: 2rem;
         margin-right: 5rem;
     }
     .header i{
@@ -851,4 +865,26 @@ form .text-field{
     .home{
         margin-top: 5rem;
     }
+
+    .social-icon{
+        padding:0;
+        margin: 0;
+    }
+    .home-content{
+        width: 400px;
+        margin-right: 5rem;
+    }
+
+    .btn-employment{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0 0px;
+    }
+    .home-img{
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    
 }
