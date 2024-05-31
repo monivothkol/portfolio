@@ -84,3 +84,14 @@ window.addEventListener('scroll', function() {
       }
     });
   });
+
+
+function hideMenu(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
+
+function showMenu(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}

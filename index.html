@@ -12,15 +12,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/826a95a370.js" crossorigin="anonymous"></script>
 
   <title>Document</title>
 </head>
 
 <body>
-  <div class="scroll-behaviour">
+
     <header class="header">
       <a href="#home" class="logo">Monivoth Site</a>
       <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#background">Background</a>
+        <a href="./project.html">Project</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <i class="fa-solid fa-bars" onclick="showMenu()" style="font-size: 2rem;"></i>
+      <nav class="sidebar">
+        <i class="fa-solid fa-xmark" style="font-size: 2rem;" onclick="hideMenu()"></i>        <a href="#background">Background</a>
         <a href="#home" class="active">Home</a>
         <a href="#background">Background</a>
         <a href="./project.html">Project</a>
@@ -149,7 +158,6 @@
       </form>
   
     </section>
-  </div>
   
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
