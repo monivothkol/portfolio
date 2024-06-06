@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <script src="./index.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -52,8 +51,8 @@
           <a href="https://github.com/monivothkol"><i class="fa-brands fa-github"></i></a>
         </div>
         <div class="btn-employment">
-          <a href="#" class="btn">Hire</a>
-          <a href="#" class="btn">Contact</a>
+          <a href="#" class="btn" onclick="showHire()">Hire</a>
+          <a href="#contact" class="btn">Contact</a>
         </div>
       </div>
       <div class="home-img">
@@ -133,21 +132,6 @@
     <section class="contact" id="contact">
       <h3 class="section-header contact-header">Contact me</h3>
       <form id="ContactForm" name="ContactForm" action="#" class="contact-box" onsubmit="return validation()" method="POST">
-        <!-- <div class="inputbox">
-                <input type="text" placeholder="Full Name" class="text-field" id="name" >
-              </div>          
-              <div class="inputbox">
-                <input type="text" placeholder="Full Name" class="text-field" id="name" >
-              </div>  
-              <div class="inputbox">
-                <input type="text" placeholder="Full Name" class="text-field" id="name" >
-              </div>  
-              <div class="text-area-field">
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-              </div>
-              <div class="inputbox">
-                
-              </div> -->
         <p class="contact-form-validation"></p>
         <input type="text" placeholder="Full Name" class="text-field" id="guest-name">
         <p class="contact-form-validation"></p>
@@ -159,40 +143,30 @@
           placeholder="Your message"></textarea>
         <input type="submit" class="btn-send-message" value="Send Message"></input>
       </form>
-  
     </section>
+    <div class="hire">
+
+      <form id="hire-form" name="hire-form" action="#" class="hire-box" onsubmit="return validation()" method="POST">
+        <i class="fa-solid fa-xmark" style="font-size: 2rem;" onclick="hideHire()"></i>  
+      <p class="contact-form-validation"></p>
+      <input type="text" placeholder="Full Name" class="text-field" id="employer-name">
+      <p class="contact-form-validation"></p>
+      <input type="text" placeholder="Company Name" class="text-field" id="company-name">
+
+      <p class="contact-form-validation"></p>
+      <input type="email" placeholder="Email address" class="text-field" id="employer-email">
+      <p class="contact-form-validation"></p>
+      <input type="tel" placeholder="Phone number" class="text-field" id="employer-phonenumber">
+      <p class="contact-form-validation"></p>
+      <textarea class="text-field text-area-field" name="guestMessage" id="employer-message" cols="30" rows="10"
+        placeholder="Your message"></textarea>
+      <input type="submit" class="btn-send-message btn-hire" value="Send Message"></input>
+    </form>
+    </div>
   
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
-  <script>
-      emailjs.init("ZroANVEBAtw4BdW7-");
-      function sendEmail(event){
-        event.preventDefault(); 
-        const contactFormValidation = document.getElementsByClassName("contact-form-validation");
-        const guestName = document.getElementById("guest-name").value;
-        const guestEmail = document.getElementById("guest-email").value;
-        const guestPhonenumber = document.getElementById("guest-phonenumber").value;
-        const guestMessage = document.getElementById("guest-message").value;
-
-        if(!guestName || !guestEmail || !guestPhonenumber || !guestMessage){
-          contactFormValidation[0].innerHTML = "Please fill in all fields";
-          return; 
-        }
-        emailjs.send("service_ialf89c", "template_y1zn9od", {
-            from_name: guestName,
-            from_email: guestEmail,
-            from_phonenumber: guestPhonenumber,
-            message: guestMessage
-
-        })
-        .then(function(response){
-            alert("Your message is sent");
-            document.getElementById("ContactForm").reset();
-        }, function(error){
-          alert("Something went wrong")
-        });
-      }
-      document.getElementById("ContactForm").addEventListener("submit", sendEmail)
+  <script src="./index.js">
 
 
   </script>

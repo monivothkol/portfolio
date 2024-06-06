@@ -399,7 +399,15 @@ form .text-field{
     font-style: bold;
     color: white;
     text-shadow: #080808;
-    
+
+}
+.hire{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn-hire{
+    padding: 10px 20px;
 }
 
 .btn-send-message:hover{
@@ -427,7 +435,23 @@ form .text-field{
     color: var(--text-color);
 }
 
+.hire-box{
+    width: 50%;
+    height: 500px;
+    background-color: grey;
+    position: absolute;
+    top: calc(50% - 250px);  
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    border-radius: 1rem;
+}   
+
 @media(max-width:576px) {
+    .hire-box form .text-field{
+        font-size: 1px;
+    }
     .home-img{
         display: none;
     }
@@ -689,6 +713,10 @@ form .text-field{
     }
     
 }
+
+
+
+
 
 /* ........ */
 

@@ -1,3 +1,66 @@
+document.addEventListener("DOMContentLoaded",function(){
+    emailjs.init("ZroANVEBAtw4BdW7-");
+    function sendEmail(event){
+      event.preventDefault(); 
+      const contactFormValidation = document.getElementsByClassName("contact-form-validation");
+      const guestName = document.getElementById("guest-name").value;
+      const guestEmail = document.getElementById("guest-email").value;
+      const guestPhonenumber = document.getElementById("guest-phonenumber").value;
+      const guestMessage = document.getElementById("guest-message").value;
+    
+      if(!guestName || !guestEmail || !guestPhonenumber || !guestMessage){
+        contactFormValidation[0].innerHTML = "Please fill in all fields";
+        return; 
+      }
+      emailjs.send("service_ialf89c", "template_y1zn9od", {
+          from_name: guestName,
+          from_email: guestEmail,
+          from_phonenumber: guestPhonenumber,
+          message: guestMessage
+    
+      })
+      .then(function(response){
+          alert("Your message is sent");
+          document.getElementById("ContactForm").reset();
+      }, function(error){
+        alert("Something went wrong")
+      });
+    }
+
+    function sendHire(event){
+        event.preventDefault(); 
+        const contactFormValidation = document.getElementsByClassName("contact-form-validation");
+        const employerName = document.getElementById("employer-name").value;
+        const employerCompany = document.getElementById("company-name").value;
+        const employerEmail = document.getElementById("employer-email").value;
+        const employerPhonenumber = document.getElementById("employer-phonenumber").value;
+        const employerMessage = document.getElementById("employer-message").value;
+      
+        if(!employerName || !employerCompany || !employerEmail || !employerPhonenumber || !employerMessage){
+          contactFormValidation[0].innerHTML = "Please fill in all fields";
+          return; 
+        }
+        emailjs.send("service_33soxng", "template_0ssbwep", {
+            from_name: employerName,
+            from_company: employerCompany,
+            from_email: employerEmail,
+            from_phonenumber: employerPhonenumber,
+            message: employerMessage,
+        
+      
+        })
+        .then(function(response){
+            alert("Your message is sent");
+            document.getElementById("hire-form").reset();
+        }, function(error){
+          alert("Something went wrong")
+        });
+      }
+    document.getElementById("ContactForm").addEventListener("submit", sendEmail);
+    document.getElementById("hire-form").addEventListener("submit", sendHire);
+
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -90,8 +153,20 @@ function hideMenu(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
 }
+function hideHire(){
+    const hirebox = document.querySelector('.hire-box')
+    hirebox.style.display = 'none'
+}
+function showHire(){
+    const hirebox = document.querySelector('.hire-box')
+    hirebox.style.display='flex';
+}
 
 function showMenu(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex'
+}
+
+function hireBtn(){
+    
 }
