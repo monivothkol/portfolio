@@ -84,9 +84,9 @@ body{
     transform: translateX(-50%);
   }
 
-section{
+/* section{
     margin-top: 10%;
-}
+} */
 
 .section-header{
     font-size: 3rem;
@@ -117,7 +117,7 @@ section{
 }
 .card{
     background-color: rgb(172, 172, 172);
-    max-width: calc(25% - 20px);
+    width: calc(25% - 20px);
     height: 450px;
     border-radius: 20px 20px 0 0;
     position: relative;
@@ -187,3 +187,80 @@ section{
     text-shadow: 1px 1px var(--text-color);
     text-align: center;
 }  
+
+
+@media(min-width:320px) {
+    .navbar{
+        display: none;
+    }
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        text-align: center;    width: 70%;
+        background-color: var(--bg-color);
+        position: absolute;
+        top: 0;
+        right: 0rem;
+        padding: 1rem;
+    }
+    
+    .sidebar a{
+        padding: 1rem;
+        font-size: 1.5rem;
+        color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    .logo{
+        padding: 0;
+    }
+    .section-header{
+        margin-top: 20vh;
+        font-size: 1rem;
+    }
+
+    .container{
+        display: block;
+        width: 100%;
+        
+    }
+    .card{
+        background-color: rgb(172, 172, 172);
+        width: calc(100% - 2rem);
+        height: 450px;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        margin: 30px;
+    }
+}
+@media(min-width:1024px){
+    .container{
+        display: flex;
+    }
+    .card{
+        width: 25%;  
+    }
+    .card-img img{
+        height: 40vh;
+    }
+}
+@media(min-width:2560px){
+    .card{
+        height: 45rem; 
+    }
+    .card-img img{
+        height: 40vh;
+    }
+    .card-description p{
+        font-size: 2rem;
+    }
+    .card-btn{
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+}

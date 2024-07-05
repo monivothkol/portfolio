@@ -478,6 +478,12 @@ form .text-field{
     }
     .home-content{
         padding: 0;
+        align-items: center;
+        
+    }
+    .social-icon{
+        padding-left: 0;
+        margin: 0;
     }
 
     
@@ -496,9 +502,14 @@ form .text-field{
         justify-content: center;
         flex-direction: row;
     }
-    .social-icon{
-        padding-left: calc(20%);
+    .home-content{
+        padding: 0;
+        align-items: center;
         
+    }
+    .social-icon{
+        padding-left: 0;
+        margin: 0;
     }
     .social-icon a{
         width: 3rem;
@@ -752,6 +763,12 @@ form .text-field{
     }
     .home-content{
         padding: 0;
+        align-items: center;
+        
+    }
+    .social-icon{
+        padding-left: 0;
+        margin: 0;
     }
 
     
@@ -867,7 +884,7 @@ form .text-field{
     }
 
     .home-content{
-        width: 50%;
+        width: 40%;
         padding: 0;
     }
 
@@ -880,6 +897,8 @@ form .text-field{
     }
     .navbar{
         display: flex;
+        width: 100%;
+        
     }
     .logo{
         font-size: 2rem;
