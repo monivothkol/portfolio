@@ -6,38 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/826a95a370.js" crossorigin="anonymous"></script>
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/826a95a370.js" crossorigin="anonymous"></script>
   <meta property="og:image" content="./pic/preview.png" />
   <title>Document</title>
 </head>
 
 <body>
 
-    <header class="header">
+  <header class="header">
+    <a href="#home" class="logo">Monivoth Site</a>
+    <nav class="navbar">
+      <!-- <a href="#home" class="active">Home</a> -->
+      <a href="./index.html" class="active">Home</a>
+      <a href="#background">Background</a>
+      <a href="./project.html">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <i class="fa-solid fa-bars" onclick="showMenu()" style="font-size: 2rem; padding-right: 1px;"></i>
+    <nav class="sidebar">
+      <i class="fa-solid fa-xmark" style="font-size: 2rem;" onclick="hideMenu()"></i>  
       
-      <a href="#home" class="logo">Monivoth Site</a>
-      <nav class="navbar">
-        <!-- <a href="#home" class="active">Home</a> -->
-        <a href="./index.html" class="active">Home</a>
-        <a href="#background">Background</a>
-        <a href="./project.html">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <i class="fa-solid fa-bars" onclick="showMenu()" style="font-size: 2rem;"></i>
-      <nav class="sidebar">
-        <i class="fa-solid fa-xmark" style="font-size: 2rem;" onclick="hideMenu()"></i>  
-        
-        <a href="#home" class="active">Home</a>
-        <a href="#background">Background</a>
-        <a href="./project.html">Project</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+      <a href="./index.html" class="active">Home</a>
+      <a href="./index.html#background">Background</a>
+      <a href="./project.html">Project</a>
+      <a href="./index.html#contact">Contact</a>
+    </nav>
+  </header>
     <section class="home" id="home">
       <div class="home-content">
         <h3>Greeting! I'm</h3>

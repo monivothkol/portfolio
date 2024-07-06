@@ -897,8 +897,9 @@ form .text-field{
     }
     .navbar{
         display: flex;
-        width: 100%;
-        
+    }
+    .header{
+        justify-content: center;
     }
     .logo{
         font-size: 2rem;
@@ -1040,5 +1041,9 @@ form .text-field{
         font-size: 3rem;
         padding: 1rem;
     }
+    
+}
+
+@media (min-width:1024) {
     
 }

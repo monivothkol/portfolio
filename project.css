@@ -115,6 +115,7 @@ body{
     max-width: 90%;
     height: 100vh;
 }
+
 .card{
     background-color: rgb(172, 172, 172);
     width: calc(25% - 20px);
@@ -235,10 +236,18 @@ body{
         margin: 30px;
     }
 }
-@media(min-width:1024px){
+@media(min-width: 1024px){
     .container{
         display: flex;
     }
+    .navbar{
+        display: none;
+    }
+
+    .sidebar{
+        display: flex;
+    }
+    
     .card{
         width: 25%;  
     }
@@ -250,6 +259,7 @@ body{
     .card{
         height: 45rem; 
     }
+    .sidebar{display:none}
     .card-img img{
         height: 40vh;
     }
